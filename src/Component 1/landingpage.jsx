@@ -15,14 +15,22 @@ import {
   FaCheck,
   FaTimes,
   FaLightbulb,
-  FaRocket
+  FaRocket,
+  FaWhatsapp
 } from 'react-icons/fa';
 import '../Component Css/LandingPage.css';
+
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showChatbot, setShowChatbot] = useState(false);
   
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const openWhatsApp = () => {
+    // Replace with your actual WhatsApp number
+    window.open('https://wa.me/+918688349726', '_blank');
   };
 
   return (
@@ -48,6 +56,7 @@ const LandingPage = () => {
             <Link to="/contact" className="navbar-link">Contact</Link>
             <Link to="/login" className="navbar-link login-btn"><FaSignInAlt /> Login</Link>
             <Link to="/register/bellarybilling+550+software&kk$" className="navbar-link register-btn"><FaUser /> Register</Link>
+            <Link to="/create-account" className="navbar-link register-btn"><FaUser /> Create Account</Link>
           </div>
           
           <div className="hamburger" onClick={toggleMenu}>
@@ -290,6 +299,20 @@ const LandingPage = () => {
           </div>
         </div>
       </footer>
+
+      {/* Chat and WhatsApp Buttons */}
+      <div className="floating-buttons">
+        <button 
+          className="whatsapp-button"
+          onClick={openWhatsApp}
+          aria-label="Contact us on WhatsApp"
+        >
+          <FaWhatsapp />
+        </button>
+        
+      </div>
+
+      
     </div>
   );
 };

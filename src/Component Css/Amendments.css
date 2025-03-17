@@ -1,0 +1,210 @@
+/* Amendments View CSS */
+
+/* Main container for amendments view */
+.amendments-view {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header section with order ID and action buttons */
+  .amendments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .amendments-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  
+  .amendments-title .order-id {
+    margin-right: 10px;
+  }
+  
+  .amendments-title .info-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #666;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  .amendments-actions {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .amendments-actions button {
+    padding: 5px 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .amendments-actions button.save {
+    background-color: #4a90e2;
+    color: white;
+    border-color: #4a90e2;
+  }
+  
+  .amendments-actions button.cancel {
+    background-color: #999;
+    color: white;
+    border-color: #999;
+  }
+  .amendments-actions button:hover{
+    background-color:#191970 ;
+    color: white;
+  }
+  
+  /* Tabs navigation */
+  .amendments-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    overflow-x: auto;
+  }
+  
+  .amendments-tab {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+  }
+  
+  .amendments-tab.active {
+    color: #0078d4;
+    border-bottom: 2px solid #0078d4;
+    font-weight: 500;
+  }
+  
+  /* Form layout */
+  .amendments-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    width: 120px;
+    font-size: 13px;
+    color: #555;
+    padding-top: 5px;
+    text-align: right;
+    padding-right: 15px;
+  }
+  
+  .form-input {
+    flex: 1;
+  }
+  
+  .form-input input,
+  .form-input select {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    font-size: 13px;
+    color: #333;
+  }
+  
+  .form-input input:focus,
+  .form-input select:focus {
+    border-color: #0078d4;
+    outline: none;
+  }
+  
+  .form-input .date-input {
+    position: relative;
+    display: flex;
+  }
+  
+  .form-input .date-input input {
+    flex: 1;
+  }
+  
+  .form-input .date-input .calendar-icon {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+  }
+  
+  .form-input .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    cursor: pointer;
+  }
+  
+  /* Checkbox styling */
+  .form-checkbox {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 0;
+  }
+  
+  /* Placeholder for tabs under development */
+  .amendments-form-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .amendments-form {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-group {
+      flex-direction: column;
+    }
+    
+    .form-label {
+      width: 100%;
+      text-align: left;
+      padding-right: 0;
+      margin-bottom: 5px;
+    }
+  }
